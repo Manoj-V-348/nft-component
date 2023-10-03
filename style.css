@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #0d192b;
+  display: grid;
+  font-family: "Outfit", sans-serif;
+}
+p {
+  font-size: 18px;
+}
+.main--container,
+.image--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main--container {
+  flex-direction: column;
+  padding: 10px;
+}
+main {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #14253d;
+  width: 80vw;
+  height: auto;
+  border-radius: 15px;
+  max-width: 350px;
+}
+.image--container,
+.bottom--container {
+  margin-left: auto;
+  margin-right: auto;
+}
+.image--container {
+  margin-top: 3%;
+  margin-bottom: 2%;
+  max-width: 100%;
+  position: relative;
+}
+.image--container .nft--image {
+  width: 85%;
+  height: auto;
+
+  overflow: hidden;
+}
+.image--container > .nft--image > img {
+  border-radius: 10px;
+  width: 100%;
+}
+.nft--details {
+  border-bottom: 1px solid gray;
+}
+.bottom--container {
+  height: 45%;
+  width: 85%;
+  color: white;
+  padding-top: 2%;
+}
+.bottom--container > h2 {
+  font-size: 1.3rem;
+}
+.bottom--container > p {
+  margin-top: 3%;
+  font-size: 0.8rem;
+}
+.soft--blue {
+  color: #8bacda;
+}
+.nft--details {
+  margin-top: 5%;
+  padding-bottom: 3%;
+}
+.nft--icon {
+  margin-right: auto;
+}
+.logo {
+  max-width: 1rem;
+  height: auto;
+  margin-right: 5px;
+}
+.nft--icon,
+.time--remaining,
+.nft--details,
+.owner--details {
+  display: flex;
+}
+.owner--details {
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 4%;
+  margin-bottom: 2%;
+}
+.owner--details > img {
+  max-width: 40px;
+  margin-right: 3%;
+}
+.attribution {
+  text-align: center;
+  color: white;
+}
+.nft--icon > p {
+  color: #00fff7;
+}
+
+.bottom--container > h2:hover,
+.owner--details > p > a:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+.nft--image::before {
+  content: "";
+  background-image: url("./images/icon-view.svg");
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 39.5%;
+  left: 41.7%;
+  right: 0;
+  bottom: 0;
+}
+
+.nft--image:hover::before {
+  opacity: 1;
+  cursor: pointer;
+}
